@@ -1,0 +1,498 @@
+fileFormatVersion: 2
+guid: d490741dd0aed3b41874049251e59585
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MonsterFrontStomp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cb150accb30f444a1a12500491040f
+      internalID: 216901914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a2dd97e5b74454c8776ee3bedc1264
+      internalID: 1448593025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cffde70275c094c9f6ab32d92001e5
+      internalID: 1583975615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673cc44f216df3948b4d61eeb6efca24
+      internalID: 223006495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd42b281ecc05e4f81573eea4ef1087
+      internalID: -2060833685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef6a3f768f7d184db9e57febd3602a1
+      internalID: 586025298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5e2a5247544ab46a18d90481ef9628
+      internalID: 1763401913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_7
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62817e064b92ab14f84b67e60f0ec380
+      internalID: 1488933385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973d4276422be2e4dab7c2b7fc1edcb3
+      internalID: 1767223023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c031dda05b0002d46929247d2b509f75
+      internalID: -957090027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fcb0454dc7d6e418d927b50ca2c875
+      internalID: 2030250872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_11
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa6adf7102fff0488c3626cf26d9d6b
+      internalID: 1769095563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b61ead55e162c74fbad9c0f4c2a8312
+      internalID: -720869020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955b9976cdb1e6e4a9627bf9626ee02a
+      internalID: -774641611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd9de05e1b278043be84aaa8519f59c
+      internalID: -320605767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonsterFrontStomp_15
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a36a9e8e25b3344e9c889ed710adb08
+      internalID: 106296084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 42ae1236da2900849b9b126c7121a7da
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MonsterFrontStomp_0: 216901914
+      MonsterFrontStomp_1: 1448593025
+      MonsterFrontStomp_10: 2030250872
+      MonsterFrontStomp_11: 1769095563
+      MonsterFrontStomp_12: -720869020
+      MonsterFrontStomp_13: -774641611
+      MonsterFrontStomp_14: -320605767
+      MonsterFrontStomp_15: 106296084
+      MonsterFrontStomp_2: 1583975615
+      MonsterFrontStomp_3: 223006495
+      MonsterFrontStomp_4: -2060833685
+      MonsterFrontStomp_5: 586025298
+      MonsterFrontStomp_6: 1763401913
+      MonsterFrontStomp_7: 1488933385
+      MonsterFrontStomp_8: 1767223023
+      MonsterFrontStomp_9: -957090027
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

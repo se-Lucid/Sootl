@@ -1,0 +1,1911 @@
+fileFormatVersion: 2
+guid: 52ca0bba9f10a5042b9044f89011cea1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FearMeter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5696767202a55c468a1d6976db05dd2
+      internalID: 968917276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0f487c10996f9469da23ad23e990d6
+      internalID: -1883095281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0acebf6d3a52e440a07e07b8b6bf810
+      internalID: -1102950821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac0398c90fd25b47884f435ad8d0591
+      internalID: 626881404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0506fd839efd0ac48bd2d3f46811ba56
+      internalID: 170505983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03109f0fa62617b489ac69c5d3c9113c
+      internalID: 1732127871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee76d51911160a458a0c9fb7b7a5c1c
+      internalID: -59129915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf8ba834c550544f8c39440a6c36003
+      internalID: 1590866069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233c9f77da189f5419c10e8e90823cef
+      internalID: 997691371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920820587f87cb749bc929c21fa661c3
+      internalID: 963860246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a858608b62cc54caa7756d2fef2b53
+      internalID: -1709494891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75099b547ced18942904d8f83ba951a2
+      internalID: -520449179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58876f432ce22f44182e8571165c13da
+      internalID: -1987405041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c398d17855d61a04abf003b49e5ff399
+      internalID: -593049638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82aeeb4331c543b4da266b2ec3b4df60
+      internalID: 1941049590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40804c82dc3dafa4c8021b4957d6d16d
+      internalID: 1675978848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4035bf1fc5bedeb4bb3dc69b08ce1f21
+      internalID: 90003543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850253d1ad78cdd4282359967a396507
+      internalID: -1563424001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db7ea1946f7eb14e946464bfbb30b5e
+      internalID: 1916831964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0cc8ac81237654888783d7016b6d4f
+      internalID: 1715496629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8fca3e23ba73749ab597cd39e31e9d
+      internalID: -2029211685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_21
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b35e92cb4eade4d8884115b65583ed
+      internalID: -1337063018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_22
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb79bdf0dd2a294d9abb6ebe22cfc16
+      internalID: 1278985825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_23
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ab4eda066c04c4fa86d1aa4af0e370
+      internalID: -852388933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_24
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1335b8ac2f3d564b88139e933b5f302
+      internalID: 1418580769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_25
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97988753f600948418fb158f18c69f57
+      internalID: -1386209050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_26
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943a83f35b6e21f42954fdb6a63e8278
+      internalID: -83315840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_27
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c9f8873b9db2e4ca39f3ae44a16e62
+      internalID: 200180110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_28
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078fd18a4eb52ec4283060ef252c06a6
+      internalID: -1986035620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_29
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8faff7995e4b64e998b7fd15bb290f
+      internalID: -1195387143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_30
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c84dccb52a1a34ea2bc04e8c3c33ec
+      internalID: 787305981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_31
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059a1a3a95e49aa43bb9d511dc3cc414
+      internalID: -849649405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_32
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185ccfc1faa06804fbcd645d51fbca08
+      internalID: 1740786516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_33
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b80e5fec794fc4bb8a9610831b4d14
+      internalID: -1943339465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_34
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d707ed1a29c84c4284744b68a1eeb97
+      internalID: 1754150193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_35
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba2705f1ac95844f804c6d7c16c9cfc
+      internalID: 1708700635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_36
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a662325464c9cb4ab8c527a34cd2d8c
+      internalID: -255711108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_37
+      rect:
+        serializedVersion: 2
+        x: 4736
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b639bcd2c5fa2441b1cc7fe94875f90
+      internalID: -173444853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_38
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f081320f53c914ea6d443047a0fb05
+      internalID: 1706052734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_39
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0887780d52ba0434d8e0d7a18ec9bdb7
+      internalID: -928149100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_40
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729bad789d4c5f944aac43c671ed9ceb
+      internalID: 369167633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_41
+      rect:
+        serializedVersion: 2
+        x: 5248
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d51cfa999ded1b4382ac091574e9ecd
+      internalID: -1048083622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_42
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3abb6c91f74f75469d9cfa642397a83
+      internalID: 1396526084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_43
+      rect:
+        serializedVersion: 2
+        x: 5504
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6dd1f263dd11244beb2cb41d734413
+      internalID: -1026105768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_44
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a224f124908d4947b285c02130986a0
+      internalID: 866562652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_45
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3b0fbf1aaf5654d96ffe0d5af4e2da
+      internalID: -2039372194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_46
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ce87ece8ec999478305e518ab9a921
+      internalID: -1273568649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_47
+      rect:
+        serializedVersion: 2
+        x: 6016
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28a87ad858a7354f9f27cb68b33afdd
+      internalID: -872775379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_48
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be547494632cba44dbe28cbaacc910cb
+      internalID: -950593390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_49
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57801fb4ea6f3e43bbc0cab87b356a1
+      internalID: -779593305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_50
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1445392675628489b2eba3ef26da53
+      internalID: 531899498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_51
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f88d16802b9804cbb61e1f44289e04
+      internalID: -233476664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_52
+      rect:
+        serializedVersion: 2
+        x: 6656
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570cea4302ef6d347a24c7d72c00df44
+      internalID: -2109321424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_53
+      rect:
+        serializedVersion: 2
+        x: 6784
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5696aeef00c1e4ca9fc3e15d3dcb33
+      internalID: 634972082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_54
+      rect:
+        serializedVersion: 2
+        x: 6912
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4c0d57e6fd5f544869e39e8131978b
+      internalID: -1308199416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_55
+      rect:
+        serializedVersion: 2
+        x: 7040
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531410f1c5a112646a77bc875ee1f821
+      internalID: 2099058310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_56
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9313f8456b02acf41a489b920fe30ab5
+      internalID: -1657550226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_57
+      rect:
+        serializedVersion: 2
+        x: 7296
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7032bcc42bf33cd4d8ef39f7bd7d4311
+      internalID: -1520352861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_58
+      rect:
+        serializedVersion: 2
+        x: 7424
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6b2020701259e4895282313ee26522
+      internalID: 463016472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_59
+      rect:
+        serializedVersion: 2
+        x: 7552
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f900e779f71c04580a86d0f669b5a6
+      internalID: -295928267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_60
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad95a7eee8ba2a46b5b3c288bfa339a
+      internalID: 2115805831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_61
+      rect:
+        serializedVersion: 2
+        x: 7808
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac34b9f33b472bc42937f89d81dc828d
+      internalID: -1744615429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_62
+      rect:
+        serializedVersion: 2
+        x: 7936
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f67215dc9453c24e93d8c9c38ab7682
+      internalID: -1513394638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_63
+      rect:
+        serializedVersion: 2
+        x: 8064
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43aa8f6e7d1f3d43a0c6d379fc4c240
+      internalID: 1852156747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_64
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfce5a4fe282aa440b5e559589938303
+      internalID: 9503207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_65
+      rect:
+        serializedVersion: 2
+        x: 8320
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aed8adb31af8bb42aa8a2b4c081f520
+      internalID: -631122120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_66
+      rect:
+        serializedVersion: 2
+        x: 8448
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371e27b11fb4dc349882437abf06a806
+      internalID: -838234176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_67
+      rect:
+        serializedVersion: 2
+        x: 8576
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d8aa1f65d932342a778d72ecedec95
+      internalID: 89308341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_68
+      rect:
+        serializedVersion: 2
+        x: 8704
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaf08fdeed81bd448dd9ac65ee79887
+      internalID: -1648272923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_69
+      rect:
+        serializedVersion: 2
+        x: 8832
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2393c64b3ea794c48a3fff4774c65ebc
+      internalID: 814500510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_70
+      rect:
+        serializedVersion: 2
+        x: 8960
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a73cd4ea624e949a780fe54efe1eba
+      internalID: 2054846437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_71
+      rect:
+        serializedVersion: 2
+        x: 9088
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b41e1adc9cc1f46a34edb4ea287bf2
+      internalID: -1422477917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_72
+      rect:
+        serializedVersion: 2
+        x: 9216
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3704c5f9d8d90514aa3297829041d385
+      internalID: -1961463983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_73
+      rect:
+        serializedVersion: 2
+        x: 9344
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a6f09e542338746afb7660bb606ed6
+      internalID: 1756804130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_74
+      rect:
+        serializedVersion: 2
+        x: 9472
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e190e01864f3f49a80e719f269a7bc
+      internalID: -365336613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_75
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3c7562bfdcf164d8938556d51bae7d
+      internalID: -100552424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_76
+      rect:
+        serializedVersion: 2
+        x: 9728
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e9abce3444c7a45aef17acc01fcc7c
+      internalID: -1774531872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FearMeter_77
+      rect:
+        serializedVersion: 2
+        x: 9856
+        y: 0
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe4e2381ddb8af45b9826a0b35e9596
+      internalID: -1118043419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2d422121802692e498c0bd6fe10acfe4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FearMeter_0: 968917276
+      FearMeter_1: -1883095281
+      FearMeter_10: -1709494891
+      FearMeter_11: -520449179
+      FearMeter_12: -1987405041
+      FearMeter_13: -593049638
+      FearMeter_14: 1941049590
+      FearMeter_15: 1675978848
+      FearMeter_16: 90003543
+      FearMeter_17: -1563424001
+      FearMeter_18: 1916831964
+      FearMeter_19: 1715496629
+      FearMeter_2: -1102950821
+      FearMeter_20: -2029211685
+      FearMeter_21: -1337063018
+      FearMeter_22: 1278985825
+      FearMeter_23: -852388933
+      FearMeter_24: 1418580769
+      FearMeter_25: -1386209050
+      FearMeter_26: -83315840
+      FearMeter_27: 200180110
+      FearMeter_28: -1986035620
+      FearMeter_29: -1195387143
+      FearMeter_3: 626881404
+      FearMeter_30: 787305981
+      FearMeter_31: -849649405
+      FearMeter_32: 1740786516
+      FearMeter_33: -1943339465
+      FearMeter_34: 1754150193
+      FearMeter_35: 1708700635
+      FearMeter_36: -255711108
+      FearMeter_37: -173444853
+      FearMeter_38: 1706052734
+      FearMeter_39: -928149100
+      FearMeter_4: 170505983
+      FearMeter_40: 369167633
+      FearMeter_41: -1048083622
+      FearMeter_42: 1396526084
+      FearMeter_43: -1026105768
+      FearMeter_44: 866562652
+      FearMeter_45: -2039372194
+      FearMeter_46: -1273568649
+      FearMeter_47: -872775379
+      FearMeter_48: -950593390
+      FearMeter_49: -779593305
+      FearMeter_5: 1732127871
+      FearMeter_50: 531899498
+      FearMeter_51: -233476664
+      FearMeter_52: -2109321424
+      FearMeter_53: 634972082
+      FearMeter_54: -1308199416
+      FearMeter_55: 2099058310
+      FearMeter_56: -1657550226
+      FearMeter_57: -1520352861
+      FearMeter_58: 463016472
+      FearMeter_59: -295928267
+      FearMeter_6: -59129915
+      FearMeter_60: 2115805831
+      FearMeter_61: -1744615429
+      FearMeter_62: -1513394638
+      FearMeter_63: 1852156747
+      FearMeter_64: 9503207
+      FearMeter_65: -631122120
+      FearMeter_66: -838234176
+      FearMeter_67: 89308341
+      FearMeter_68: -1648272923
+      FearMeter_69: 814500510
+      FearMeter_7: 1590866069
+      FearMeter_70: 2054846437
+      FearMeter_71: -1422477917
+      FearMeter_72: -1961463983
+      FearMeter_73: 1756804130
+      FearMeter_74: -365336613
+      FearMeter_75: -100552424
+      FearMeter_76: -1774531872
+      FearMeter_77: -1118043419
+      FearMeter_8: 997691371
+      FearMeter_9: 963860246
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
