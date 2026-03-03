@@ -13,11 +13,11 @@ public class EnemyAI : MonoBehaviour
     public int startNum = 3; //change this if u want
 
     private GameObject enemy;
-    private GameObject player; //put player obj on here
+    [SerializeField] private GameObject player; //put player obj on here
     private NavMeshAgent agent;
-    private float hitRange;
-    private float angerDst;
-    private float angerMax;
+    [SerializeField] private float hitRange;
+    [SerializeField] private float angerDst;
+    [SerializeField] private float angerMax;
     private float speed;
     private int nextNum;
     private bool angry;
@@ -33,8 +33,8 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        enemy = this.gameObject;
-        agent = this.gameObject.GetComponent<NavMeshAgent>();
+        enemy = gameObject;
+        agent = gameObject.GetComponent<NavMeshAgent>();
         hitRange = 8.0f;
         nextNum = startNum;
         speed = agent.speed;
@@ -69,13 +69,15 @@ public class EnemyAI : MonoBehaviour
                 nextNum++;
                 if (nextNum <= targets.Length - 1)
                 {
-                    target = targets[nextNum];
-                    agent.SetDestination(target.transform.position);
+                    
+                    
                 }
                 else
                 {
                     nextNum = 0;
                 }
+                target = targets[nextNum];
+                agent.SetDestination(target.transform.position);
             }
         }
 
@@ -107,9 +109,9 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            dstToTarget = new Vector3(enemy.transform.position.x - target.transform.position.x,
-            enemy.transform.position.y - target.transform.position.y,
-            enemy.transform.position.z - target.transform.position.z).magnitude;
+            dstToTarget = new Vector3(  enemy.transform.position.x - target.transform.position.x,
+                                        enemy.transform.position.y - target.transform.position.y,
+                                        enemy.transform.position.z - target.transform.position.z).magnitude;
         }
     }
     private void PlayerLOS() //check if player is behind wall
