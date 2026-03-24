@@ -26,7 +26,6 @@ public class EnemyAI : MonoBehaviour
     private bool canAngry;
     public enum Targeting
     {
-
         Patrol,
         Player,
         Light
@@ -37,13 +36,13 @@ public class EnemyAI : MonoBehaviour
     {
         enemy = gameObject;
         agent = gameObject.GetComponent<NavMeshAgent>();
-        hitRange = 8.0f;
+        hitRange = 2.0f;
         nextNum = startNum;
         speed = agent.speed;
         targeting = Targeting.Patrol;
         angry = false;
         canAngry = true;
-        angerDst = 28;
+        //angerDst = 28;
     }
 
     // Update is called once per frame
@@ -82,10 +81,12 @@ public class EnemyAI : MonoBehaviour
         if (targeting == Targeting.Player)
         {
             target = player;
+            //speed = agent.speed * 1.5f;
 
             if (dstToTarget <= hitRange)
             {
                 //do damage or kill or whatever
+                Debug.Log("BLEH, YOU DIE");
             }
             if (dstToTarget <= angerMax)
             {
@@ -100,9 +101,9 @@ public class EnemyAI : MonoBehaviour
             return;
         else if (target == player)
         {
-            dstToPlayer = new Vector3(enemy.transform.position.x - target.transform.position.x,
-            enemy.transform.position.y - target.transform.position.y,
-            enemy.transform.position.z - target.transform.position.z).magnitude;
+            dstToPlayer = new Vector3(  enemy.transform.position.x - target.transform.position.x,
+                                        enemy.transform.position.y - target.transform.position.y,
+                                        enemy.transform.position.z - target.transform.position.z).magnitude;
         }
         else
         {
@@ -120,7 +121,7 @@ public class EnemyAI : MonoBehaviour
         if (Physics.Raycast(transform.position, rayDirection, out hit, angerDst))
         {
             Debug.DrawRay(transform.position, rayDirection * angerDst, Color.blue);
-            if (hit.transform.parent.gameObject == player && canAngry)
+            if (hit.transform.gameObject.tag == player.tag && canAngry)
             {
                 StartCoroutine(GetAngry());
             }
