@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+[RequireComponent(typeof(NavMeshAgent))]
 
 public class EnemyAI : MonoBehaviour
 {
@@ -10,13 +12,13 @@ public class EnemyAI : MonoBehaviour
     public GameObject target;
     public float dstToTarget;
     public float dstToPlayer;
-    public int startNum = 3; //change this if u want
+    public int startNum = 0; //change if needed
 
     private GameObject enemy;
     [SerializeField] private GameObject player; //put player obj on here
     private NavMeshAgent agent;
     [SerializeField] private float hitRange;
-    [SerializeField] private float angerDst;
+    [SerializeField] private float angerDst; //change if needed
     [SerializeField] private float angerMax;
     private float speed;
     private int nextNum;
@@ -41,6 +43,7 @@ public class EnemyAI : MonoBehaviour
         targeting = Targeting.Patrol;
         angry = false;
         canAngry = true;
+        angerDst = 28;
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class EnemyAI : MonoBehaviour
         if (target != null)
         {
             DistanceToTarget(target);
+            agent.SetDestination(target.transform.position);
         }
 
         if (targeting == Targeting.Patrol)
@@ -61,18 +65,12 @@ public class EnemyAI : MonoBehaviour
 
             if (targets.Length != 0 && target == null) //patrolling system
             {
-                target = targets[startNum];
-                agent.SetDestination(target.transform.position);
+                target = targets[nextNum];
             }
             if (dstToTarget <= hitRange)
             {
                 nextNum++;
-                if (nextNum <= targets.Length - 1)
-                {
-                    
-                    
-                }
-                else
+                if (nextNum > targets.Length - 1)
                 {
                     nextNum = 0;
                 }
@@ -84,7 +82,6 @@ public class EnemyAI : MonoBehaviour
         if (targeting == Targeting.Player)
         {
             target = player;
-            agent.SetDestination(target.transform.position);
 
             if (dstToTarget <= hitRange)
             {
@@ -116,12 +113,14 @@ public class EnemyAI : MonoBehaviour
     }
     private void PlayerLOS() //check if player is behind wall
     {
+        Debug.Log("Close to Player");
+
         RaycastHit hit;
         var rayDirection = player.transform.position - transform.position;
-        if (Physics.Raycast(transform.position, rayDirection, out hit))
+        if (Physics.Raycast(transform.position, rayDirection, out hit, angerDst))
         {
-
-            if (hit.transform == player && canAngry)
+            Debug.DrawRay(transform.position, rayDirection * angerDst, Color.blue);
+            if (hit.transform.parent.gameObject == player && canAngry)
             {
                 StartCoroutine(GetAngry());
             }
@@ -137,6 +136,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(0); //in case you want an animation in here or something
         targeting = Targeting.Player;
+        angry = true;
     }
     private IEnumerator AngerTimer()
     {
