@@ -11,10 +11,10 @@ public class PlayerController : MonoBehaviour //, IInteractable
   
     public float walkSpeed = 5.0f;
     public float runSpeed = 8.0f;
-    public float jumpForce = 8.0f;
+    public float jumpForce = 10.0f;
     public float gravity = 20.0f;
     public float mouseSensitivity = 2.0f;
-    public float lookXLimit = 25.0f;
+    public float lookXLimit = 90.0f;
     private float grabDistance = 1000000f;
 
     public Camera playerCamera;
