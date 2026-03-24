@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d490741dd0aed3b41874049251e59585
+guid: 1ebf4e35bb7b3c44a826497706d6f192
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MonsterFrontStomp_0
+      name: MonsterSide_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7cb150accb30f444a1a12500491040f
-      internalID: 216901914
+      spriteID: b37031a2ad6a16447b985351698fed1b
+      internalID: 2030267336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_1
+      name: MonsterSide_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -147,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86a2dd97e5b74454c8776ee3bedc1264
-      internalID: 1448593025
+      spriteID: 4a78ee3972695204bbc0dfc5a2128906
+      internalID: 1293120470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_2
+      name: MonsterSide_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66cffde70275c094c9f6ab32d92001e5
-      internalID: 1583975615
+      spriteID: b2ccddfd226f5ba4c9976ec8e394206f
+      internalID: -3983345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_3
+      name: MonsterSide_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -191,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 673cc44f216df3948b4d61eeb6efca24
-      internalID: 223006495
+      spriteID: 1bfd343045fa44247b43a813e513cb73
+      internalID: -96185116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_4
+      name: MonsterSide_4
       rect:
         serializedVersion: 2
         x: 0
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd42b281ecc05e4f81573eea4ef1087
-      internalID: -2060833685
+      spriteID: fec8c5734429a814eafb24dfcad764f2
+      internalID: -571634243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_5
+      name: MonsterSide_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef6a3f768f7d184db9e57febd3602a1
-      internalID: 586025298
+      spriteID: 65ddb5fb3e447614281af8c7db3bc9c2
+      internalID: 245292514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_6
+      name: MonsterSide_6
       rect:
         serializedVersion: 2
         x: 2048
@@ -257,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a5e2a5247544ab46a18d90481ef9628
-      internalID: 1763401913
+      spriteID: a200d7a32f815874185c3be710c4544c
+      internalID: -1304889252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_7
+      name: MonsterSide_7
       rect:
         serializedVersion: 2
         x: 3072
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62817e064b92ab14f84b67e60f0ec380
-      internalID: 1488933385
+      spriteID: 0d2e84678b4f03f4687780379e285972
+      internalID: -981582881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_8
+      name: MonsterSide_8
       rect:
         serializedVersion: 2
         x: 0
@@ -301,14 +301,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 973d4276422be2e4dab7c2b7fc1edcb3
-      internalID: 1767223023
+      spriteID: 3050814605e4bcc468a757e69a5de2ef
+      internalID: -193828096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_9
+      name: MonsterSide_9
       rect:
         serializedVersion: 2
         x: 1024
@@ -323,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c031dda05b0002d46929247d2b509f75
-      internalID: -957090027
+      spriteID: 0c40fe41467371d4792276d56490ef51
+      internalID: 1611825441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_10
+      name: MonsterSide_10
       rect:
         serializedVersion: 2
         x: 2048
@@ -345,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4fcb0454dc7d6e418d927b50ca2c875
-      internalID: 2030250872
+      spriteID: 99909d52167439042977f5a5f2a016e0
+      internalID: 698254753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_11
+      name: MonsterSide_11
       rect:
         serializedVersion: 2
         x: 3072
@@ -367,14 +367,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1aa6adf7102fff0488c3626cf26d9d6b
-      internalID: 1769095563
+      spriteID: 5198896ea4430274aa07a563dbbb1e4f
+      internalID: 1322695052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_12
+      name: MonsterSide_12
       rect:
         serializedVersion: 2
         x: 0
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b61ead55e162c74fbad9c0f4c2a8312
-      internalID: -720869020
+      spriteID: 3c9786b514af0024ea24b38917052767
+      internalID: 1475435569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_13
+      name: MonsterSide_13
       rect:
         serializedVersion: 2
         x: 1024
@@ -411,14 +411,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 955b9976cdb1e6e4a9627bf9626ee02a
-      internalID: -774641611
+      spriteID: 4bbd4671ccfce8146840c3627734e843
+      internalID: -1552309375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_14
+      name: MonsterSide_14
       rect:
         serializedVersion: 2
         x: 2048
@@ -433,14 +433,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bd9de05e1b278043be84aaa8519f59c
-      internalID: -320605767
+      spriteID: 873334e1e09678b4982897f698c1e417
+      internalID: -1312383326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MonsterFrontStomp_15
+      name: MonsterSide_15
       rect:
         serializedVersion: 2
         x: 3072
@@ -455,8 +455,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a36a9e8e25b3344e9c889ed710adb08
-      internalID: 106296084
+      spriteID: 4fe37ee5d9b71fb4d9e8fd5ef7a4c162
+      internalID: 1862388263
       vertices: []
       indices: 
       edges: []
@@ -465,7 +465,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 42ae1236da2900849b9b126c7121a7da
+    spriteID: ba172ec5cdc7d5b488ff50e8fcfe96be
     internalID: 0
     vertices: []
     indices: 
@@ -475,22 +475,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MonsterFrontStomp_0: 216901914
-      MonsterFrontStomp_1: 1448593025
-      MonsterFrontStomp_10: 2030250872
-      MonsterFrontStomp_11: 1769095563
-      MonsterFrontStomp_12: -720869020
-      MonsterFrontStomp_13: -774641611
-      MonsterFrontStomp_14: -320605767
-      MonsterFrontStomp_15: 106296084
-      MonsterFrontStomp_2: 1583975615
-      MonsterFrontStomp_3: 223006495
-      MonsterFrontStomp_4: -2060833685
-      MonsterFrontStomp_5: 586025298
-      MonsterFrontStomp_6: 1763401913
-      MonsterFrontStomp_7: 1488933385
-      MonsterFrontStomp_8: 1767223023
-      MonsterFrontStomp_9: -957090027
+      MonsterSide_0: 2030267336
+      MonsterSide_1: 1293120470
+      MonsterSide_10: 698254753
+      MonsterSide_11: 1322695052
+      MonsterSide_12: 1475435569
+      MonsterSide_13: -1552309375
+      MonsterSide_14: -1312383326
+      MonsterSide_15: 1862388263
+      MonsterSide_2: -3983345
+      MonsterSide_3: -96185116
+      MonsterSide_4: -571634243
+      MonsterSide_5: 245292514
+      MonsterSide_6: -1304889252
+      MonsterSide_7: -981582881
+      MonsterSide_8: -193828096
+      MonsterSide_9: 1611825441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

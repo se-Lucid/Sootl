@@ -58,7 +58,6 @@ public class DynamicBillboarding : MonoBehaviour
         
         //this makes the function work for an arbitrary number of sides ig
         degree = Mathf.Abs(sides[0].transform.localEulerAngles.y);
-        Debug.Log(degree);
         return degree > sectionSize / 2 && degree < startDegree ? CheckDirection(1): 0;
     }
     private int CheckDirection(int times)
