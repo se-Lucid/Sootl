@@ -10,10 +10,14 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] targets;
     public GameObject target;
+    public GameObject flashlight;
+
     public float dstToTarget;
     public float dstToPlayer;
     public int startNum = 0; //change if needed
 
+    private GameObject lightLoc;
+    private GameObject lastLightLoc;
     private GameObject enemy;
     [SerializeField] private GameObject player; //put player obj on here
     private NavMeshAgent agent;
@@ -48,6 +52,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         agent.speed = speed;
         if (target != null)
         {
@@ -57,9 +62,14 @@ public class EnemyAI : MonoBehaviour
 
         if (targeting == Targeting.Patrol)
         {
+            if (lightLoc != null && lightLoc.activeInHierarchy && 
+                Vector3.Distance(lightLoc.transform.position, transform.position) < angerDst)
+            {
+                LineOfSight(lightLoc);
+            }
             if (Vector3.Distance(player.transform.position, transform.position) < angerDst) //player within angering range
             {
-                PlayerLOS();
+                LineOfSight(player);
             }
 
             if (targets.Length != 0 && target == null) //patrolling system
@@ -93,6 +103,17 @@ public class EnemyAI : MonoBehaviour
                 StartCoroutine(AngerTimer());
             }
         }
+
+        flashlight.GetComponent<INT_Flashlight>().lightTarget = lightLoc;
+        lastLightLoc = lightLoc;
+        if (targeting == Targeting.Light)
+        {
+            target = lightLoc;
+            if (target.transform.position.x == transform.position.x)
+            {
+                //do something
+            }
+        }
     }
 
     private void DistanceToTarget(GameObject target) //for patrolling
@@ -112,20 +133,21 @@ public class EnemyAI : MonoBehaviour
                                         enemy.transform.position.z - target.transform.position.z).magnitude;
         }
     }
-    private void PlayerLOS() //check if player is behind wall
+    private void LineOfSight(GameObject obj) //check if player is behind wall
     {
         Debug.Log("Close to Player");
 
         RaycastHit hit;
-        var rayDirection = player.transform.position - transform.position;
+        var rayDirection = obj.transform.position - transform.position;
         if (Physics.Raycast(transform.position, rayDirection, out hit, angerDst))
         {
             Debug.DrawRay(transform.position, rayDirection * angerDst, Color.blue);
-            if (hit.transform.gameObject.tag == player.tag && canAngry)
+            if (hit.transform.gameObject.tag == player.tag && canAngry
+                || hit.transform.GetComponent<Light>() != null && canAngry)
             {
-                StartCoroutine(GetAngry());
+                StartCoroutine(GetAngry(obj));
             }
-            else
+            else 
             {
                 return;
             }
@@ -133,11 +155,18 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private IEnumerator GetAngry()
+    private IEnumerator GetAngry(GameObject obj)
     {
-        yield return new WaitForSeconds(0); //in case you want an animation in here or something
-        targeting = Targeting.Player;
+        if (obj.transform.gameObject.tag == player.tag)
+        {
+            targeting = Targeting.Player;
+        }
+        else
+        {
+            targeting = Targeting.Light;
+        }
         angry = true;
+        yield return new WaitForSeconds(0); //in case you want an animation in here or something
     }
     private IEnumerator AngerTimer()
     {
