@@ -4,21 +4,24 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public static string lastScene = "Backstage";
-    public void GoBack()
+    public static void GoBack()
     {
         Change(lastScene);
     }
-    public void Change(string newScene)
+    public static void Change(string newScene)
     {
         SceneManager.LoadScene(newScene);
         lastScene = newScene;
+        Cursor.lockState = CursorLockMode.Locked;
     }
-    public void GameOver()
+    public static void GameOver()
     {
         SceneManager.LoadScene("GameOver");
+        Cursor.lockState = CursorLockMode.None;
     }
-    public void QuitOut()
+    public static void QuitOut()
     {
+        Cursor.lockState = CursorLockMode.None;
         Application.Quit();
     }
 }

@@ -23,9 +23,9 @@ public class EnemyAI : MonoBehaviour
     private GameObject enemy;
     [SerializeField] private GameObject player; //put player obj on here
     private NavMeshAgent agent;
-    [SerializeField] private float hitRange;
-    [SerializeField] private float angerDst; //change if needed
-    [SerializeField] private float angerMax;
+    [SerializeField] private float hitRange = 1.0f; 
+    [SerializeField] private float angerDst = 18; //change if needed
+    [SerializeField] private float angerMax = 30;
     private float speed;
     private float runSpeed;
     private int nextNum;
@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
         agent = gameObject.GetComponent<NavMeshAgent>();
         angerDst = 18;
         angerMax = 30;
-        hitRange = 10.0f;
+        hitRange = 1.0f;
         nextNum = startNum;
         speed = agent.speed;
         runSpeed = speed * 2;
@@ -107,6 +107,7 @@ public class EnemyAI : MonoBehaviour
             {
                 //do damage or kill or whatever
                 Debug.Log("BLEH, YOU DIE");
+                ChangeScene.GameOver();
             }
             if (dstToTarget <= angerMax)
             {

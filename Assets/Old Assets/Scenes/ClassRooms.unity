@@ -4577,6 +4577,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2158d4025dd82b144a947225ba3dace2, type: 3}
+--- !u!20 &258327033 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7927063588131425728, guid: 2fc8a53ab1faa964a9b6db62e0060444, type: 3}
+  m_PrefabInstance: {fileID: 3696343123118893723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &258538608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11794,7 +11799,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 1.0833334
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 728af622b59625b48ac10345f4db3991, type: 2}
   m_BuildHeightMesh: 0
@@ -21391,6 +21396,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3208183074657794465, guid: 860866577db561d4398bebcdf91a704a, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 258327033}
     - target: {fileID: 3904824035683349317, guid: 860866577db561d4398bebcdf91a704a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -43906,13 +43915,15 @@ MonoBehaviour:
   - {fileID: 538324491}
   - {fileID: 884736271}
   target: {fileID: 0}
+  flashlight: {fileID: 0}
   dstToTarget: 0
   dstToPlayer: 0
   startNum: 0
   player: {fileID: 1589443083}
-  hitRange: 0
-  angerDst: 4
-  angerMax: 0
+  hitRange: 1
+  angerDst: 18
+  angerMax: 30
+  canAngry: 0
   targeting: 0
 --- !u!195 &4103342367560657155
 NavMeshAgent:
