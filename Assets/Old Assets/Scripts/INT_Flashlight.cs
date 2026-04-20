@@ -89,6 +89,8 @@ public class INT_Flashlight : MonoBehaviour, Interactable
                     if (lightTarget == null)
                     {
                         lightTarget = Instantiate(lightSource, hitPoint, Quaternion.identity);
+                        //below is intended to be a failsafe to prevent repeated cloning, does not work lul
+                        lightTarget = GameObject.Find("WorkLight(Clone)");
                     }
                     else 
                     {
