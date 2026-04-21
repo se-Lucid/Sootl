@@ -43,9 +43,6 @@ public class EnemyAI : MonoBehaviour
     {
         enemy = gameObject;
         agent = gameObject.GetComponent<NavMeshAgent>();
-        angerDst = 18;
-        angerMax = 30;
-        hitRange = 1.0f;
         nextNum = startNum;
         speed = agent.speed;
         runSpeed = speed * 2;
