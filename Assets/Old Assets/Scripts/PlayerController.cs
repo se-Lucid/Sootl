@@ -8,9 +8,10 @@ using UnityEngine.SearchService;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour //, IInteractable
 {
-  
     public float walkSpeed = 5.0f;
     public float runSpeed = 8.0f;
+    public float crawlSpeed = 3.0f;
+    public bool isCrawling = false;
     public float jumpForce = 10.0f;
     public float gravity = 20.0f;
     public float mouseSensitivity = 2.0f;
@@ -60,7 +61,7 @@ public class PlayerController : MonoBehaviour //, IInteractable
 
         //Walking / Running
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+        float currentSpeed = isCrawling ? crawlSpeed : (isRunning ? runSpeed : walkSpeed);
 
         float inputX = Input.GetAxis("Horizontal");
         float inputZ = Input.GetAxis("Vertical");
@@ -231,7 +232,6 @@ public class PlayerController : MonoBehaviour //, IInteractable
         if (holding != null)
         {
             holding.GetComponent<Interactable>().Use(lightSource);
-            
         }
     }
 }
