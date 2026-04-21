@@ -44114,7 +44114,7 @@ MonoBehaviour:
   angerReset: 5
   lightLoc: {fileID: 0}
   player: {fileID: 1589443083}
-  hitRange: 1
+  hitRange: 5
   angerDst: 18
   angerMax: 30
   canAngry: 0

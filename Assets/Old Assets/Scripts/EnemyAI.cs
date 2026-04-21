@@ -74,7 +74,7 @@ public class EnemyAI : MonoBehaviour
         if (targeting == Targeting.Patrol)
         {
             dstToPlayer = Vector3.Distance(player.transform.position, transform.position);
-            Debug.Log(dstToPlayer.ToString());
+            //Debug.Log(dstToPlayer.ToString());
 
             agent.speed = speed;
             if (lightLoc != null && lightLoc.activeInHierarchy && 

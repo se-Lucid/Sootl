@@ -17,6 +17,16 @@ public class INT_Flashlight : MonoBehaviour, Interactable
 
     public GameObject lightTarget;
     public Camera playerCamera;
+    public int layerMask;
+    public int lightMask; 
+    public int enemyMask;
+
+    void Start()
+    {
+        layerMask = LayerMask.NameToLayer("Light");
+        //enemyMask = LayerMask.NameToLayer("Monster");
+        //layerMask = ~(1 << lightMask | 1 << enemyMask);
+    }
     public int GetSpriteID()
     {
         return spriteID;
@@ -79,12 +89,11 @@ public class INT_Flashlight : MonoBehaviour, Interactable
         if (on && held)
         {
             //For light against distant walls
-            Ray r = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-            if (Physics.Raycast(r, out RaycastHit hit, flashDist))
+            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, flashDist, layerMask))
             {
-                Vector3 hitPoint = hit.point + hit.normal;
+                Vector3 hitPoint = hit.point + hit.normal * 0.01f;
                 Debug.Log(hitPoint);
-                if (hitPoint != new Vector3(0,0,0))
+                if (hit.point != new Vector3(0,0,0))
                 {
                     if (lightTarget == null)
                     {

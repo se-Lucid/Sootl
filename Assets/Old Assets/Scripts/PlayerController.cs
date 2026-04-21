@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour //, IInteractable
     public float lookXLimit = 90.0f;
     private float grabDistance = 1000000f;
 
+
     public Camera playerCamera;
     
     
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour //, IInteractable
     public GameObject heldItem2;
     public GameObject hand1;
     public GameObject hand2;
-    
+
     //private Material materialHand1, materialHand2;
     public Sprite[] textures = new Sprite[3];
 
@@ -48,12 +49,12 @@ public class PlayerController : MonoBehaviour //, IInteractable
         grabDistance = 10f;
         hand1.GetComponent<SpriteRenderer>().sprite = textures[0];
         hand2.GetComponent<SpriteRenderer>().sprite = textures[0];
-        //materialHand1.mainTexture = textures[0];
-        //materialHand2.mainTexture = textures[0];
-        //hand1.transform.LookAt(playerCamera.transform, hand1.transform.forward);
-        //hand2.transform.LookAt(playerCamera.transform, hand1.transform.forward);
+    //materialHand1.mainTexture = textures[0];
+    //materialHand2.mainTexture = textures[0];
+    //hand1.transform.LookAt(playerCamera.transform, hand1.transform.forward);
+    //hand2.transform.LookAt(playerCamera.transform, hand1.transform.forward);
 
-    }
+}
 
     void Update()
     {
