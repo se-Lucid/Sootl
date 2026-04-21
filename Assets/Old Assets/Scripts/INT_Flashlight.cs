@@ -112,7 +112,6 @@ public class INT_Flashlight : MonoBehaviour, Interactable
             {
                 lightTarget.SetActive(false);
             }
-
         }
         else
         {

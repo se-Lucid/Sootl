@@ -44,6 +44,7 @@ public class EnemyAI : MonoBehaviour
         enemy = gameObject;
         agent = gameObject.GetComponent<NavMeshAgent>();
         nextNum = startNum;
+        hitRange = 8;
         speed = agent.speed;
         runSpeed = speed * 1.5f;
         targeting = Targeting.Patrol;
