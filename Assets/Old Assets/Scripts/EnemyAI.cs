@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
     public float dstToTarget;
     public float dstToPlayer;
     public int startNum = 0; //change if needed
-    private int angerReset = 5;
+    public int angerReset = 5;
 
     private GameObject lightLoc;
     private GameObject lastLightLoc;
@@ -50,6 +50,7 @@ public class EnemyAI : MonoBehaviour
         angry = false;
         canAngry = true;
         //angerDst = 28;
+        Collider col = GetComponent<BoxCollider>();
     }
 
     
@@ -79,7 +80,8 @@ public class EnemyAI : MonoBehaviour
                 LineOfSight(player);
             }
 
-            if (targets.Length != 0 && target == null) //patrolling system
+            if (targets.Length != 0 && target == null ||
+                targets.Length != 0 && target == player) //patrolling system
             {
                 target = targets[nextNum];
             }
@@ -123,16 +125,17 @@ public class EnemyAI : MonoBehaviour
 
         if (targeting == Targeting.Light)
         {
-            //check for los
+            LOSTimer(lastLightLoc);
             agent.speed = runSpeed;
             target = lightLoc;
+
             if (lightLoc == null)
             {
                 target = lastLightLoc;
             }
             if (target.transform.position.x == transform.position.x)
             {
-                //wait a few seconds and swap to patrol
+                AngerReset(5);
             }
         }
     }
@@ -172,14 +175,15 @@ public class EnemyAI : MonoBehaviour
         angry = true;
         yield return new WaitForSeconds(0); //in case you want an animation in here or something
     }
-    private IEnumerator AngerReset()
+    private IEnumerator AngerReset(int timer = 3)
     {
         if (angry)
         {
             angerReset = 5;
+            agent.speed = speed;
             canAngry = false;
             angry = false;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(timer);
             canAngry = true;
             targeting = Targeting.Patrol;
         }
@@ -189,10 +193,10 @@ public class EnemyAI : MonoBehaviour
     private void LOSTimer(GameObject obj)
     {
         var rayDirection = obj.transform.position - transform.position;
-        if (Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, angerDst))
+        if (Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, dstToTarget))
         {
-            Debug.DrawRay(transform.position, rayDirection * angerDst, Color.blue);
-            if (hit.transform.gameObject.tag == player.tag
+            Debug.DrawRay(transform.position, rayDirection * dstToTarget, Color.blue);
+            if (player.CompareTag(hit.transform.tag)
                 || hit.transform.GetComponent<Light>() == null)
             {
                 angerReset = 5;
@@ -208,4 +212,12 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (targeting == Targeting.Light && collision.transform.CompareTag("Destructable"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+    }
+
 }
