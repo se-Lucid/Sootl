@@ -82,15 +82,15 @@ public class INT_Flashlight : MonoBehaviour, Interactable
             Ray r = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
             if (Physics.Raycast(r, out RaycastHit hit, flashDist))
             {
-                Vector3 hitPoint = hit.point;
+                Vector3 hitPoint = hit.point + hit.normal;
                 Debug.Log(hitPoint);
                 if (hitPoint != new Vector3(0,0,0))
                 {
                     if (lightTarget == null)
                     {
                         lightTarget = Instantiate(lightSource, hitPoint, Quaternion.identity);
-                        //below is intended to be a failsafe to prevent repeated cloning, does not work lul
-                        lightTarget = GameObject.Find("WorkLight(Clone)");
+                        var lightTargetCol = lightTarget.AddComponent<SphereCollider>();
+                        lightTargetCol.isTrigger = true;
                     }
                     else 
                     {

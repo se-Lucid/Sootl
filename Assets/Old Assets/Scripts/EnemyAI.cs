@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     public int startNum = 0; //change if needed
     public int angerReset = 5;
 
-    private GameObject lightLoc;
+    public GameObject lightLoc;
     private GameObject lastLightLoc;
     private GameObject enemy;
     [SerializeField] private GameObject player; //put player obj on here
@@ -48,12 +48,11 @@ public class EnemyAI : MonoBehaviour
         hitRange = 1.0f;
         nextNum = startNum;
         speed = agent.speed;
-        runSpeed = speed * 2;
+        runSpeed = speed * 1.5f;
         targeting = Targeting.Patrol;
         angry = false;
         canAngry = true;
         //angerDst = 28;
-        Collider col = GetComponent<BoxCollider>();
     }
 
     
@@ -65,6 +64,14 @@ public class EnemyAI : MonoBehaviour
         {
             dstToTarget = Vector3.Distance(target.transform.position, transform.position);
             agent.SetDestination(target.transform.position);
+        }
+        if (flashlight != null)
+        {
+            lightLoc = flashlight.GetComponent<INT_Flashlight>().lightTarget;
+            if (lightLoc != null)
+            {
+                lastLightLoc = lightLoc;
+            }
         }
 
         if (targeting == Targeting.Patrol)
@@ -83,8 +90,7 @@ public class EnemyAI : MonoBehaviour
                 LineOfSight(player);
             }
 
-            if (targets.Length != 0 && target == null ||
-                targets.Length != 0 && target == player) //patrolling system
+            if (targets.Length != 0 && target != targets[nextNum]) //patrolling system
             {
                 target = targets[nextNum];
             }
@@ -105,7 +111,7 @@ public class EnemyAI : MonoBehaviour
             target = player;
             LOSTimer(player);
 
-            if (dstToTarget <= hitRange)
+            if (dstToPlayer <= hitRange)
             {
                 //do damage or kill or whatever
                 Debug.Log("BLEH, YOU DIE");
@@ -117,14 +123,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        if (flashlight != null)
-        {
-            flashlight.GetComponent<INT_Flashlight>().lightTarget = lightLoc;
-            if (lightLoc != null)
-            {
-                lastLightLoc = lightLoc;
-            }
-        }
+        
 
         if (targeting == Targeting.Light)
         {
@@ -136,9 +135,9 @@ public class EnemyAI : MonoBehaviour
             {
                 target = lastLightLoc;
             }
-            if (target.transform.position.x == transform.position.x)
+            if (Vector3.Distance(target.transform.position, transform.position) <= hitRange)
             {
-                AngerReset(5);
+                StartCoroutine(AngerReset(5));
             }
         }
     }
@@ -146,14 +145,12 @@ public class EnemyAI : MonoBehaviour
    
     private void LineOfSight(GameObject obj) //check if player is behind wall
     {
-        Debug.Log("Close to Player");
-
         var rayDirection = obj.transform.position - transform.position;
         if (Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, angerDst))
         {
             Debug.DrawRay(transform.position, rayDirection * angerDst, Color.blue);
             if (player.CompareTag(hit.transform.tag) && canAngry
-                || hit.transform.GetComponent<Light>() != null && canAngry)
+                || hit.transform.gameObject == lightLoc && canAngry)
             {
                 StartCoroutine(GetAngry(obj));
             }
@@ -215,11 +212,11 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision col)
     {
-        if (targeting == Targeting.Light && collision.transform.CompareTag("Destructable"))
+        if (targeting == Targeting.Light && col.gameObject.CompareTag("Destructable"))
         {
-            collision.gameObject.SetActive(false);
+            col.gameObject.SetActive(false);
         }
     }
 
