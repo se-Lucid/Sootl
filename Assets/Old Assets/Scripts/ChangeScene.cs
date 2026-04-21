@@ -3,25 +3,33 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public static string lastScene = "Backstage";
+    public static string lastScene = "ClassRooms";
+    public string sceneName;
     public static void GoBack()
     {
         Change(lastScene);
+        SceneManager.UnloadSceneAsync("GameOver");
     }
-    public static void Change(string newScene)
+    public static void Change(string load)
     {
-        SceneManager.LoadScene(newScene);
-        lastScene = newScene;
-        Cursor.lockState = CursorLockMode.Locked;
+        if(load != null ||  load != lastScene)
+        {
+            SceneManager.LoadScene(load);
+        }
+        //lastScene = load;
     }
     public static void GameOver()
     {
         SceneManager.LoadScene("GameOver");
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     public static void QuitOut()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Application.Quit();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Change(sceneName);
     }
 }
