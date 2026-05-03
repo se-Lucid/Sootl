@@ -35,10 +35,22 @@ public class EnemyAI : MonoBehaviour
     {
         Patrol,
         Player,
-        Light
+        Light,
+        Story
     }
     public Targeting targeting;
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (targeting == Targeting.Light && col.gameObject.CompareTag("Destructable"))
+        {
+            col.gameObject.SetActive(false);
+        }
+        if (targeting == Targeting.Story && col.gameObject.CompareTag("StoryDestruct"))
+        {
+            col.gameObject.SetActive(false);
+        }
+    }
     void Start()
     {
         enemy = gameObject;
@@ -121,7 +133,10 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        
+        if (targeting == Targeting.Story)
+        {
+            agent.speed = runSpeed;
+        }
 
         if (targeting == Targeting.Light)
         {
@@ -210,12 +225,10 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
-    void OnCollisionEnter(Collision col)
+
+    private void StorySetter()
     {
-        if (targeting == Targeting.Light && col.gameObject.CompareTag("Destructable"))
-        {
-            col.gameObject.SetActive(false);
-        }
+        targeting = Targeting.Story;
     }
 
 }
