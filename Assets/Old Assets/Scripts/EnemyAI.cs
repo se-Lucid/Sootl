@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject flashlight;
 
     public float dstToTarget;
-    public float dstToPlayer;
+    public float dstToPlayer = 200;
     public int startNum = 0; //change if needed
     public int angerReset = 5;
 
@@ -23,8 +23,8 @@ public class EnemyAI : MonoBehaviour
     private GameObject enemy;
     [SerializeField] private GameObject player; //put player obj on here
     private NavMeshAgent agent;
-    [SerializeField] private float hitRange = 1.0f; 
-    [SerializeField] private float angerDst = 18; //change if needed
+    [SerializeField] private float hitRange = 10f; 
+    [SerializeField] private float angerDst = 28; //change if needed
     [SerializeField] private float angerMax = 30;
     private float speed;
     private float runSpeed;
@@ -56,17 +56,14 @@ public class EnemyAI : MonoBehaviour
         enemy = gameObject;
         agent = gameObject.GetComponent<NavMeshAgent>();
         nextNum = startNum;
-        hitRange = 8;
         speed = agent.speed;
-        runSpeed = speed * 1.5f;
+        runSpeed = speed * 2f;
         targeting = Targeting.Patrol;
         angry = false;
         canAngry = true;
-        //angerDst = 28;
     }
 
     
-    // Update is called once per frame
     void Update()
     {
         
@@ -90,14 +87,15 @@ public class EnemyAI : MonoBehaviour
             //Debug.Log(dstToPlayer.ToString());
 
             agent.speed = speed;
-            if (lightLoc != null && lightLoc.activeInHierarchy && 
-                Vector3.Distance(lightLoc.transform.position, transform.position) < angerDst)
+            if (lightLoc != null && lightLoc.activeInHierarchy 
+                && Vector3.Distance(lightLoc.transform.position, transform.position) < angerDst)
             {
                 LineOfSight(lightLoc);
             }
-            if (dstToPlayer < angerDst) //player within angering range
+            if (dstToPlayer < angerDst && LineOfSight(player)) //player within angering range
             {
-                LineOfSight(player);
+                Debug.Log("something");
+                StartCoroutine(GetAngry(player));
             }
 
             if (targets.Length != 0 && target != targets[nextNum]) //patrolling system
@@ -115,30 +113,24 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        if (targeting == Targeting.Player)
+        else if (targeting == Targeting.Player)
         {
-            agent.speed = speed;
+            dstToPlayer = Vector3.Distance(player.transform.position, transform.position);
+            agent.speed = runSpeed;
             target = player;
             LOSTimer(player);
-
-            if (dstToPlayer <= hitRange)
-            {
-                //do damage or kill or whatever
-                Debug.Log("BLEH, YOU DIE");
-                ChangeScene.GameOver();
-            }
-            if (dstToTarget <= angerMax)
+            if (dstToTarget >= angerMax)
             {
                 StartCoroutine(AngerReset());
             }
         }
 
-        if (targeting == Targeting.Story)
+        else if (targeting == Targeting.Story)
         {
             agent.speed = runSpeed;
         }
 
-        if (targeting == Targeting.Light)
+        else if (targeting == Targeting.Light)
         {
             LOSTimer(lastLightLoc);
             agent.speed = runSpeed;
@@ -153,30 +145,33 @@ public class EnemyAI : MonoBehaviour
                 StartCoroutine(AngerReset(5));
             }
         }
+        if (dstToPlayer <= hitRange)
+        {
+            //do damage or kill or whatever
+            Debug.Log("BLEH, YOU DIE");
+            ChangeScene.GameOver();
+        }
     }
 
    
-    private void LineOfSight(GameObject obj) //check if player is behind wall
+    private bool LineOfSight(GameObject obj) //check if player is behind wall
     {
         var rayDirection = obj.transform.position - transform.position;
-        if (Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, angerDst))
+        Debug.DrawRay(transform.position, rayDirection * angerDst, Color.yellow);
+        if (
+            Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, angerDst) 
+            && (player.CompareTag(hit.transform.tag) || hit.transform.gameObject == lightLoc)
+            && canAngry
+            )
         {
-            Debug.DrawRay(transform.position, rayDirection * angerDst, Color.blue);
-            if (player.CompareTag(hit.transform.tag) && canAngry
-                || hit.transform.gameObject == lightLoc && canAngry)
-            {
-                StartCoroutine(GetAngry(obj));
-            }
-            else 
-            {
-                return;
-            }
-
+            return true;
         }
+        return false;
     }
 
     private IEnumerator GetAngry(GameObject obj)
     {
+        Debug.Log("evil");
         if (player.CompareTag(obj.tag))
         {
             targeting = Targeting.Player;
@@ -192,6 +187,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (angry)
         {
+            Debug.Log("anger no more");
             angerReset = 5;
             agent.speed = speed;
             canAngry = false;

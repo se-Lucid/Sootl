@@ -20,6 +20,7 @@ public class INT_Flashlight : MonoBehaviour, Interactable
     public int layerMask;
     public int lightMask; 
     public int enemyMask;
+    public float wallDist = 1;
 
     void Start()
     {
@@ -65,15 +66,17 @@ public class INT_Flashlight : MonoBehaviour, Interactable
     public void Use(GameObject obj)
     {
         SoundFX_Manager.Instance.Play(SoundFX_Manager.SoundType.Flashlight_Click); //Temp Sound
-        if (on)
+        if (on)//to turn off
         {
+            playerCamera.GetComponentInChildren<Light>().enabled = false;
             obj.GetComponent<Light>().range = storedRange;
             obj.GetComponent<Light>().color = storedColor;
             on = false;
 
         }
-        else
+        else//to turn on
         {
+            playerCamera.GetComponentInChildren<Light>().enabled = true;
             lightSource = obj;
             storedRange = obj.GetComponent<Light>().range;
             obj.GetComponent<Light>().range = brightRange;
@@ -91,13 +94,14 @@ public class INT_Flashlight : MonoBehaviour, Interactable
             //For light against distant walls
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, flashDist, layerMask))
             {
-                Vector3 hitPoint = hit.point + hit.normal * 0.01f;
+                Vector3 hitPoint = hit.point + hit.normal * wallDist;
                 Debug.Log(hitPoint);
                 if (hit.point != new Vector3(0,0,0))
                 {
                     if (lightTarget == null)
                     {
                         lightTarget = Instantiate(lightSource, hitPoint, Quaternion.identity);
+                        lightTarget.GetComponent<Light>().enabled = false;
                         var lightTargetCol = lightTarget.AddComponent<SphereCollider>();
                         lightTargetCol.isTrigger = true;
                     }
