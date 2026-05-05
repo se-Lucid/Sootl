@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Old Assets/Scenes/ClassRooms.unity
     guid: 9b89de50f16c0e34ca2b35b3616f699a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Old Assets/Scenes/GameOver.unity
     guid: 2f1a23afc19c97b4e938596ff5fa944a
+  - enabled: 1
+    path: Assets/Old Assets/Scenes/Stage.unity
+    guid: e03407942faacbe4e8e7e0f2189ce69e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

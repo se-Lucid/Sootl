@@ -5,6 +5,11 @@ public class ChangeScene : MonoBehaviour
 {
     public static string lastScene = "ClassRooms";
     public string sceneName;
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public static void GoBack()
     {
         Change(lastScene);

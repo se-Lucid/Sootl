@@ -136,7 +136,7 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                StartCoroutine(AngerReset(4));
+                StartCoroutine(AngerReset());
             }
             LOSTimer(lastLightLoc);
             target = lastLightLoc;
@@ -184,7 +184,7 @@ public class EnemyAI : MonoBehaviour
         }
         yield return new WaitForSeconds(0); //in case you want an animation in here or something
     }
-    private IEnumerator AngerReset(int timer = 3)
+    private IEnumerator AngerReset(int timer = 1)
     {
         if (angry)
         {
@@ -224,7 +224,7 @@ public class EnemyAI : MonoBehaviour
                 angerReset--;
                 if (angerReset <= 0)
                 {
-                    StartCoroutine(AngerReset(7));
+                    StartCoroutine(AngerReset());
                 }
             }
         }
