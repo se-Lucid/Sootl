@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] targets;
+    public GameObject[] storyTargets;
     public GameObject target;
     public GameObject flashlight;
 
@@ -22,10 +23,11 @@ public class EnemyAI : MonoBehaviour
     private GameObject lastLightLoc;
     private GameObject enemy;
     [SerializeField] private GameObject player; //put player obj on here
+    [SerializeField] private DynamicBillboarding faces;
     private NavMeshAgent agent;
     [SerializeField] private float hitRange = 10f; 
-    [SerializeField] private float angerDst = 28; //change if needed
-    [SerializeField] private float angerMax = 30;
+    [SerializeField] private float angerDst = 12; //change if needed
+    [SerializeField] private float angerMax = 20;
     private float speed;
     private float runSpeed;
     private int nextNum;
@@ -39,20 +41,21 @@ public class EnemyAI : MonoBehaviour
         Story
     }
     public Targeting targeting;
-
-    void OnCollisionEnter(Collision col)
-    {
-        if (targeting == Targeting.Light && col.gameObject.CompareTag("Destructable"))
+    
+    void OnTriggerEnter(Collider other)
+{
+        if (targeting == Targeting.Light && other.gameObject.GetComponent<Destructable>())
         {
-            col.gameObject.SetActive(false);
+            other.gameObject.GetComponent<Destructable>().BlowUp();
         }
-        if (targeting == Targeting.Story && col.gameObject.CompareTag("StoryDestruct"))
+        //if (targeting == Targeting.Story && col.gameObject.CompareTag("StoryDestruct"))
         {
-            col.gameObject.SetActive(false);
+            //col.gameObject.SetActive(false);
         }
     }
     void Start()
     {
+        faces = FindAnyObjectByType<DynamicBillboarding>();
         enemy = gameObject;
         agent = gameObject.GetComponent<NavMeshAgent>();
         nextNum = startNum;
@@ -87,10 +90,14 @@ public class EnemyAI : MonoBehaviour
             //Debug.Log(dstToPlayer.ToString());
 
             agent.speed = speed;
-            if (lightLoc != null && lightLoc.activeInHierarchy 
-                && Vector3.Distance(lightLoc.transform.position, transform.position) < angerDst)
+            if (lightLoc != null 
+                && lightLoc.activeInHierarchy 
+                && Vector3.Distance(lightLoc.transform.position, transform.position) < angerDst
+                && LineOfSight(lightLoc)
+                )
             {
-                LineOfSight(lightLoc);
+                StartCoroutine(GetAngry(lightLoc));
+
             }
             if (dstToPlayer < angerDst && LineOfSight(player)) //player within angering range
             {
@@ -115,8 +122,8 @@ public class EnemyAI : MonoBehaviour
 
         else if (targeting == Targeting.Player)
         {
-            dstToPlayer = Vector3.Distance(player.transform.position, transform.position);
             agent.speed = runSpeed;
+            dstToPlayer = Vector3.Distance(player.transform.position, transform.position);
             target = player;
             LOSTimer(player);
             if (dstToTarget >= angerMax)
@@ -132,18 +139,17 @@ public class EnemyAI : MonoBehaviour
 
         else if (targeting == Targeting.Light)
         {
+            agent.speed = runSpeed; 
+            if (!lightLoc.activeInHierarchy)
+            {
+                lastLightLoc = lightLoc;
+            }
+            else
+            {
+                StartCoroutine(AngerReset(4));
+            }
             LOSTimer(lastLightLoc);
-            agent.speed = runSpeed;
-            target = lightLoc;
-
-            if (lightLoc == null)
-            {
-                target = lastLightLoc;
-            }
-            if (Vector3.Distance(target.transform.position, transform.position) <= hitRange)
-            {
-                StartCoroutine(AngerReset(5));
-            }
+            target = lastLightLoc;
         }
         if (dstToPlayer <= hitRange)
         {
@@ -161,7 +167,7 @@ public class EnemyAI : MonoBehaviour
         if (
             Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, angerDst) 
             && (player.CompareTag(hit.transform.tag) || hit.transform.gameObject == lightLoc)
-            && canAngry
+            //&& canAngry
             )
         {
             return true;
@@ -171,6 +177,7 @@ public class EnemyAI : MonoBehaviour
 
     private IEnumerator GetAngry(GameObject obj)
     {
+        agent.speed = runSpeed;
         Debug.Log("evil");
         if (player.CompareTag(obj.tag))
         {
@@ -187,12 +194,21 @@ public class EnemyAI : MonoBehaviour
     {
         if (angry)
         {
-            Debug.Log("anger no more");
-            angerReset = 5;
-            agent.speed = speed;
             canAngry = false;
             angry = false;
-            yield return new WaitForSeconds(timer);
+            Debug.Log("anger no more");
+            foreach (SpriteRenderer face in faces.sides)
+            {
+                face.gameObject.GetComponent<Animator>().SetBool("Lost", true);
+            }
+            angerReset = 5;
+            speed = 0;
+            yield return new WaitForSeconds(timer); 
+            foreach (SpriteRenderer face in faces.sides)
+            {
+                face.gameObject.GetComponent<Animator>().SetBool("Lost", false);
+            }
+            speed = agent.speed;
             canAngry = true;
             targeting = Targeting.Patrol;
         }
@@ -204,11 +220,10 @@ public class EnemyAI : MonoBehaviour
         var rayDirection = obj.transform.position - transform.position;
         if (Physics.Raycast(transform.position, rayDirection, out RaycastHit hit, dstToTarget))
         {
-            Debug.DrawRay(transform.position, rayDirection * dstToTarget, Color.blue);
-            if (player.CompareTag(hit.transform.tag)
-                || hit.transform.GetComponent<Light>() == null)
+            //Debug.DrawRay(transform.position, rayDirection * dstToTarget, Color.blue);
+            if (LineOfSight(obj))
             {
-                angerReset = 5;
+                angerReset = 2;
                 return;
             }
             else while (angerReset > 0)

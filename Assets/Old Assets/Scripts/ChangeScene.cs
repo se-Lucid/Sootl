@@ -9,21 +9,33 @@ public class ChangeScene : MonoBehaviour
     public static void GoBack()
     {
         Change(lastScene);
-        SceneManager.UnloadSceneAsync("GameOver");
     }
     public static void Change(string load)//to hard load a scene like after a gameover or post cutscene
     {
-        if(load != null ||  load != lastScene)
+        if(load != null)// && load != lastScene
         {
             
+            
+            if(load == "ClassRooms")
+            {
+                SceneManager.LoadSceneAsync("Cafeteria");
+            }
             SceneManager.LoadScene(load);
         }
+        //SceneManager.UnloadSceneAsync("GameOver");
+
         //lastScene = load;
     }
-    public static void SoftTransition(string toLoad, string toUnload)
+    public static void SoftTransition(string toLoad = null, string toUnload = null)
     {
-        SceneManager.LoadSceneAsync(toLoad);
-        SceneManager.UnloadSceneAsync(toUnload);
+        if (toLoad != null)
+        {
+            SceneManager.LoadSceneAsync(toLoad);
+        }
+        if (toUnload != null)
+        {
+            SceneManager.UnloadSceneAsync(toUnload);
+        }
     }
     public static void GameOver()
     {
@@ -32,7 +44,6 @@ public class ChangeScene : MonoBehaviour
     }
     public static void QuitOut()
     {
-        Cursor.lockState = CursorLockMode.Confined;
         Application.Quit();
     }
     private void OnTriggerEnter(Collider other)

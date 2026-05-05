@@ -95,7 +95,7 @@ public class INT_Flashlight : MonoBehaviour, Interactable
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, flashDist, layerMask))
             {
                 Vector3 hitPoint = hit.point + hit.normal * wallDist;
-                Debug.Log(hitPoint);
+                //Debug.Log(hitPoint);
                 if (hit.point != new Vector3(0,0,0))
                 {
                     if (lightTarget == null)

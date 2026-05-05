@@ -88,7 +88,6 @@ public class PlayerController : MonoBehaviour //, IInteractable
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
-
         characterController.Move(moveDirection * Time.deltaTime);
         characterController.SimpleMove(8 * Vector3.down);
         #endregion
