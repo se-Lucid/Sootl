@@ -5,9 +5,15 @@ public class SoundFX_Manager : MonoBehaviour
 {
     public enum SoundType
     {
-        // List of Sounds
         Item_Pickup,
         Flashlight_Click,
+        Monster_Stomp,
+        Battery_Load,
+        Ambience,
+        Crash,
+        Monster_Roar,
+        Unskrew_Vent,
+
     }
 
     [System.Serializable]

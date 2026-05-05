@@ -42,8 +42,8 @@ public class INT_repair : MonoBehaviour, Interactable
             }
 
             obj.SetActive(false);
-            batteryAmt++;
-            //batytery load sfx
+            batteryAmt++; 
+            SoundFX_Manager.Instance.Play(SoundFX_Manager.SoundType.Flashlight_Click); //Temp Sound
             if (batteryAmt > 1)
             {
                 flashlight.SetActive(true);
