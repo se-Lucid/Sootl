@@ -5,7 +5,7 @@ public class Menu : MonoBehaviour
 {
     public void OnPlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Stage");
     }
 
     public void OnQuitButton()
