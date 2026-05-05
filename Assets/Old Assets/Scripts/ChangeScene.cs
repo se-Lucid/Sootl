@@ -33,7 +33,7 @@ public class ChangeScene : MonoBehaviour
     public static void GameOver()
     {
         SceneManager.LoadScene("GameOver");
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.None;
     }
     public static void QuitOut()
     {

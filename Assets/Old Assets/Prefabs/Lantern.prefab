@@ -79,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c8973882e98dc14781b877055fad8eb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3904824035683349317}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c8973882e98dc14781b877055fad8eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6855552313654929701}
   m_SourcePrefab: {fileID: 100100000, guid: 8c8973882e98dc14781b877055fad8eb, type: 3}
 --- !u!1 &1680253892876043796 stripped
 GameObject:
@@ -97,6 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088649d5ed3398446b34bdaaef03c082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightTarget: {fileID: 0}
+  playerCamera: {fileID: 0}
+  layerMask: 0
+  lightMask: 0
+  enemyMask: 0
+  wallDist: 1
 --- !u!65 &8085293701607464778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -231,3 +240,26 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &-6855552313654929701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680253892876043796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0

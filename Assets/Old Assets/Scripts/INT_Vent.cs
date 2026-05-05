@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class INT_Vent : MonoBehaviour, Interactable
@@ -28,7 +26,6 @@ public class INT_Vent : MonoBehaviour, Interactable
         }
         else
         {
-
             Debug.Log("You need a different item to use this!");
         }
     }
