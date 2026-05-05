@@ -25,12 +25,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private GameObject player; //put player obj on here
     [SerializeField] private DynamicBillboarding faces;
     private NavMeshAgent agent;
-    [SerializeField] private float hitRange = 10f; 
+    [SerializeField] private float hitRange = 1f; 
     [SerializeField] private float angerDst = 12; //change if needed
     [SerializeField] private float angerMax = 20;
     private float speed;
     private float runSpeed;
-    private int nextNum;
+    private int nextNum = -1;
     private bool angry;
     public bool canAngry;
     public enum Targeting
@@ -42,17 +42,7 @@ public class EnemyAI : MonoBehaviour
     }
     public Targeting targeting;
     
-    void OnTriggerEnter(Collider other)
-{
-        if (targeting == Targeting.Light && other.gameObject.GetComponent<Destructable>())
-        {
-            other.gameObject.GetComponent<Destructable>().BlowUp();
-        }
-        //if (targeting == Targeting.Story && col.gameObject.CompareTag("StoryDestruct"))
-        {
-            //col.gameObject.SetActive(false);
-        }
-    }
+    
     void Start()
     {
         faces = FindAnyObjectByType<DynamicBillboarding>();
@@ -178,7 +168,7 @@ public class EnemyAI : MonoBehaviour
     private IEnumerator GetAngry(GameObject obj)
     {
         agent.speed = runSpeed;
-        Debug.Log("evil");
+        //Debug.Log("evil");
         if (player.CompareTag(obj.tag))
         {
             targeting = Targeting.Player;
@@ -188,6 +178,10 @@ public class EnemyAI : MonoBehaviour
             targeting = Targeting.Light;
         }
         angry = true;
+        foreach (SpriteRenderer face in faces.sides)
+        {
+            face.gameObject.GetComponent<Animator>().SetBool("Lost", false);
+        }
         yield return new WaitForSeconds(0); //in case you want an animation in here or something
     }
     private IEnumerator AngerReset(int timer = 3)
@@ -196,7 +190,7 @@ public class EnemyAI : MonoBehaviour
         {
             canAngry = false;
             angry = false;
-            Debug.Log("anger no more");
+            //Debug.Log("anger no more");
             foreach (SpriteRenderer face in faces.sides)
             {
                 face.gameObject.GetComponent<Animator>().SetBool("Lost", true);
@@ -212,7 +206,6 @@ public class EnemyAI : MonoBehaviour
             canAngry = true;
             targeting = Targeting.Patrol;
         }
-
     }
 
     private void LOSTimer(GameObject obj)
@@ -231,15 +224,62 @@ public class EnemyAI : MonoBehaviour
                 angerReset--;
                 if (angerReset <= 0)
                 {
-                    StartCoroutine(AngerReset());
+                    StartCoroutine(AngerReset(7));
                 }
             }
         }
     }
 
-    private void StorySetter()
+
+    #region Story Scripts
+    void OnTriggerEnter(Collider other)
     {
-        targeting = Targeting.Story;
+        if (targeting == Targeting.Light && other.gameObject.GetComponent<Destructable>())
+        {
+            targeting = Targeting.Story;
+            other.gameObject.GetComponent<Destructable>().BlowUp();
+            if (other.gameObject.CompareTag("StoryDestructable"))
+            {
+                StoryRage();
+            }
+        }
+        
+    }
+    public void StoryRage()
+    {
+        targets = storyTargets;
+        nextNum = 0;
+        hitRange = 1f;
+        target = targets[nextNum];
+        StartCoroutine(RunIntoBoxes());
     }
 
+    private IEnumerator RunIntoBoxes()
+    {
+        Debug.Log(nextNum + " " + targets.Length);
+        bool inProgress = true;
+        while(inProgress)
+        {
+            agent.speed = runSpeed;
+            targeting = Targeting.Story;
+            if (dstToTarget <= hitRange)
+            {
+                nextNum++;
+                if (nextNum > targets.Length - 1)
+                {
+                    inProgress = false;
+                    yield return null;
+                }
+                else
+                {
+                    target = targets[nextNum];
+                }
+            }
+            yield return null;
+        }
+        //Debug.Log("WHY ARE YOU LIKE THIS");
+        target.GetComponent<Destructable>().GetStuck();
+        Destroy(gameObject);
+    }
+    #endregion
 }

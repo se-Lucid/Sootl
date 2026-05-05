@@ -10,7 +10,7 @@ public class INT_Flashlight : MonoBehaviour, Interactable
     private float storedRange = 6f;
     private float brightRange = 15f;
     private Color storedColor = Color.gray;
-    private Color brightColor = Color.white;
+    private Color brightColor = new(.6f, .6f, .6f, .5f);
     private bool on = false;
     private bool held = false;
     private GameObject lightSource;
@@ -34,7 +34,7 @@ public class INT_Flashlight : MonoBehaviour, Interactable
     }
     public void PickUp()
     {
-        Debug.Log("youve picked up the item!");
+        Debug.Log("you picked up the item!");
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<MeshRenderer>().enabled = false;

@@ -5,7 +5,6 @@ public class ChangeScene : MonoBehaviour
 {
     public static string lastScene = "ClassRooms";
     public string sceneName;
-    public string previousScene;
     public static void GoBack()
     {
         Change(lastScene);
@@ -14,12 +13,6 @@ public class ChangeScene : MonoBehaviour
     {
         if(load != null)// && load != lastScene
         {
-            
-            
-            if(load == "ClassRooms")
-            {
-                SceneManager.LoadSceneAsync("Cafeteria");
-            }
             SceneManager.LoadScene(load);
         }
         //SceneManager.UnloadSceneAsync("GameOver");

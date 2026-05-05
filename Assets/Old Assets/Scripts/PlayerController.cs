@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour //, IInteractable
     public float gravity = 20.0f;
     public float mouseSensitivity = 2.0f;
     public float lookXLimit = 90.0f;
-    private float grabDistance = 1000000f;
+    private float grabDistance = 1f;
 
 
     public Camera playerCamera;
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour //, IInteractable
         hand2 = transform.Find("Main Camera").Find("Hands").GetChild(0).GetChild(1).gameObject;
         heldItem1 = null;
         heldItem2 = null;
-        grabDistance = 10f;
+        //grabDistance = 1f;
         hand1.GetComponent<SpriteRenderer>().sprite = textures[0];
         hand2.GetComponent<SpriteRenderer>().sprite = textures[0];
     //materialHand1.mainTexture = textures[0];

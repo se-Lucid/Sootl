@@ -8,6 +8,7 @@ TagManager:
   - Stationary
   - SoundFXManager
   - Destructable
+  - StoryDestructable
   layers:
   - Default
   - TransparentFX
